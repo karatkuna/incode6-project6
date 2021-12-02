@@ -1,0 +1,3 @@
+DROP DATABASE IF EXISTS project6_inventory_management;
+
+CREATE DATABASE project6_inventory_management;
