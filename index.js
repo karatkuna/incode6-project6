@@ -9,7 +9,8 @@ const flash = require('express-flash')
 
 const homeRouter = require('./routes/home')
 const productsRouter = require('./routes/products')
-const loginRouter = require('./routes/products')
+const purchasesRouter = require('./routes/purchases')
+const salesRouter = require('./routes/sales')
 const errorRouter = require('./routes/error')
 
 const PORT = process.env.PORT || 3000
@@ -48,7 +49,8 @@ app.use(methodOverride('_method'))
 // ROUTES
 // app.use('/login', loginRouter)
 // app.use('/logout', logoutRouter)
-// app.use('/users', usersRouter)
+app.use('/purchases', purchaseRouter)
+app.use('/sales', salesRouter)
 app.use('/products', productsRouter)
 app.use('/', homeRouter)
 app.use('*', errorRouter)

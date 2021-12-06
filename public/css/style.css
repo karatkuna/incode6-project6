@@ -204,6 +204,7 @@ label { width: 130px;}
 }
 
 #myForm input, #myForm select { margin-left: 10px; }
+
 .productOptions {
   align-items: flex-start !important; 
   padding-top: 5px !important;
@@ -217,3 +218,44 @@ label { width: 130px;}
 .btn-add-option {
   padding: 5px 120px;
 }
+
+.channels {
+  margin-top: 40px;
+  margin-left: 10px;
+}
+
+.product-img-box {
+  width: 200px;
+  height: 200px;
+  border: 1px solid lightgrey;
+}
+
+.item-detail { align-items: flex-start; }
+.item-detail label { width: 40px; }
+.item-qty { margin-left: 15px; display: inline-block; }
+.item-qty div { margin-bottom: 15px; }
+
+.item-qty .btn { 
+  width: 150px;
+  margin-top: 0px; 
+  font-family: 'Oswald';
+  color: dimgrey !important;
+  letter-spacing: 1.5;
+  text-align: center;
+}
+
+.item-qty input[type=checkbox] {
+  margin-left: 10px;
+  margin-right: 10px; 
+}
+
+#orderQty {
+  width: 120px;
+  height: 60px;
+  margin-top: 0px;
+  font-size: 1.8rem;
+  font-weight: 800;
+}
+
+.item-list {  margin-top: 10px; }
+
