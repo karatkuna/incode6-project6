@@ -49,7 +49,7 @@ app.use(methodOverride('_method'))
 // ROUTES
 // app.use('/login', loginRouter)
 // app.use('/logout', logoutRouter)
-app.use('/purchases', purchaseRouter)
+app.use('/purchases', purchasesRouter)
 app.use('/sales', salesRouter)
 app.use('/products', productsRouter)
 app.use('/', homeRouter)

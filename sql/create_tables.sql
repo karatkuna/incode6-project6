@@ -10,6 +10,7 @@ DROP TABLE IF EXISTS po;
 DROP TABLE IF EXISTS poitems;
 DROP TABLE IF EXISTS pricelist;
 DROP TABLE IF EXISTS pricelistitems;
+DROP TABLE IF EXISTS stock;
 DROP TABLE IF EXISTS stockmovement;
 
 CREATE TABLE IF NOT EXISTS users (
@@ -98,6 +99,14 @@ CREATE TABLE IF NOT EXISTS pricelistitems (
   pricelist_id INT NOT NULL,
   productoptions_id INT NOT NULL,
   price NUMERIC(5,2)
+);
+
+CREATE TABLE IF NOT EXISTS stock (
+  id SERIAL PRIMARY KEY,
+  productoptions_id INT NOT NULL,
+  channel_id INT NOT NULL,
+  qty INT NOT NULL,
+  lastupdated TIMESTAMPTZ DEFAULT NOW()
 );
 
 CREATE TABLE IF NOT EXISTS stockmovement (

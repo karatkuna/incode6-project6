@@ -14,30 +14,27 @@
         <select name="" id="">
           <option value="">Doc #</option>
           <option value="">Date</option>
-          <option value="">Channel</option>
-          <option value="">Customer</option>
+          <option value="">Vendor</option>
         </select>
         <input type="text">
       </span>
     </section>
-    <h1 class="title">SALES</h1>
+    <h1 class="title">PURCHASE ORDERS</h1>
     <div class="table-wrapper">
       <table class="w3-table">
         <tr>
           <th></th>
           <th>Order #</th>
           <th>Date</th>
-          <th>Channel</th>
-          <th>Customer</th>
+          <th>Vendor</th>
           <th>Total Qty</th>
           <th>Amount</th>
         </tr>
         
-        <% for(let i = 0; i < sales.length; i++) { %>
+        <% for(let i = 0; i < po.length; i++) { %>
           <tr>
             <td></td>
-            <td><%= sales[i].docnumber %></td>
-            <td></td>
+            <td><%= po[i].docnumber %></td>
             <td></td>
             <td></td>
             <td></td>
@@ -48,19 +45,17 @@
           <td></td>
           <td>10024532</td>
           <td>2021-12-07</td>
-          <td>ebay</td>
-          <td>Tommy</td>
-          <td>2</td>
-          <td>150</td>
+          <td>Casetify</td>
+          <td>375</td>
+          <td>2150</td>
         </tr>
         <tr>
           <td></td>
           <td>10024533</td>
           <td>2021-12-07</td>
-          <td>ebay</td>
-          <td>Amber</td>
-          <td>2</td>
-          <td>160</td>
+          <td>Butterfly</td>
+          <td>40</td>
+          <td>275</td>
         </tr>
       </table>
     </div>
