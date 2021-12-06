@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+
+<%- include('../partials/head') %>
+<body>
+  <%- include('../partials/header') %>
+  <%- include('../partials/nav') %>
+
+  <main>
+    
+    <section class="w3-bar">
+      <h1 class="title w3-bar-item">NEW SALES</h1>
+      <select class="w3-bar-item channels" name="productCategory" id="productCategory">
+        <option value="">- Select pricelist -</option>
+        <% for(let i = 0; i < pricelist.length; i++) { %>
+          <option value="<%= pricelist[i].id %>"><%= pricelist[i].name %></option>
+        <% } %>
+      </select>
+    </section>
+    <section class="form-wrapper">
+      <div>
+        <label for="Customer">Customer:</label>
+        <input type="text" id="customer" name="customer">
+      </div>
+      <div>
+        <label for="Barcode">Barcode:</label>
+        <input type="text" id="barcode" name="barcode">
+      </div>
+      <div class="item-detail">
+        <span class="product-img-box">
+          <img id="productImg" src="" alt="/">
+        </span>
+        <span class="item-qty">
+          <div style="display: block !important;">
+            <p style="margin-bottom:0">Qty:</p>
+            <input id="orderQty" type="number" name="orderQty">
+          </div>
+          <div>
+            <a class="w3-light-grey btn btn-add-new">Add Product</a>
+          </div>
+          <div>
+            <input type="checkbox" id="autoAdd"> Auto add
+          </div>
+        </span>
+      </div>
+    </section>
+    <form id="myForm"></form> 
+      <section class="item-list table-wrapper">
+        <table class="w3-table">
+          <tr>
+            <th>Item</th>
+            <th>Description</th>
+            <th>Model</th>
+            <th>Qty</th>
+            <th>Amount</th>
+            <th></th>
+          </tr>
+          <tr>
+            <td><img src="https://cdn-image02.casetify.com/usr/14396/4304396/~v1/10517618_apple-watch-42_943501__render3.png.560x560-w.m80.jpg" alt=""></td>
+            <td>Security Check</td>
+            <td>Apple Watch Band 38/40/41mm</td>
+            <td>1</td>
+            <td>130</td>
+            <td><i class="fa fa-trash btn btn-icon"></i></td>
+          </tr>
+          </tr>
+          <tr>
+            <td><img src="https://cdn-image02.casetify.com/usr/9518/17739518/~v23/17366090x2_iphone13-pro-max_16003699.png.1000x1000-w.m80.jpg" alt=""></td>
+            <td>Bearly Awake by Jon Burgerman</td>
+            <td>iPhone 13</td>
+            <td>1</td>
+            <td>120</td>
+            <td><i class="fa fa-trash btn btn-icon"></i></td>
+          </tr>
+        </table>
+      </section>
+    
+    </form>
+  </main>
+
+  <%- include('../partials/footer') %>
+  
+</body>
+</html>

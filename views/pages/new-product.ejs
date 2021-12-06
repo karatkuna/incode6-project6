@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+
+<%- include('../partials/head') %>
+<body>
+  <%- include('../partials/header') %>
+  <%- include('../partials/nav') %>
+
+  <main>
+    <h1 class="title">NEW PRODUCT</h1>
+    <form id="myForm">
+      <section class="form-wrapper">
+        <div>
+          <label for="productName">Product name:</label>
+          <input type="text" id="productName" name="productName">
+        </div>
+        <div>
+          <label for="productImage">Image:</label>
+          <input type="file" id="productImage" name="productImage" accept=".jpg,.gif,.png">
+        </div>
+        <div>
+          <label for="productCategory">Category:</label>
+          <select name="productCategory" id="productCategory">
+            <% for(let i = 0; i < categories.length; i++) { %>
+              <option value="<%= categories[i].id %>"><%= categories[i].name %></option>
+            <% } %>
+          </select>
+        </div>
+        <div class="productOptions">
+          <label for="productOptions">Options</label>
+          <table>
+            <tr>
+              <th>Name</th>
+              <th>Quantity</th>
+              <th></th>
+            </tr>
+            <tr>
+              <td colspan="3" class="text-center">
+                <a class="btn btn-add-new btn-add-option border1">Add option</a>
+              </td>
+            </tr>
+            <tr>
+              <td><input type="text"></td>
+              <td><input type="number"  step="1" min="0" style="width: 90px;"></td>
+              <td><i class="fa fa-trash btn"></i></td>
+            </tr>
+          </table>
+        </div>
+      </section>
+    </form>
+  </main>
+
+  <%- include('../partials/footer') %>
+  
+</body>
+</html>
