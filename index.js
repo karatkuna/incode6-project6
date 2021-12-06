@@ -51,7 +51,7 @@ app.use(methodOverride('_method'))
 // app.use('/users', usersRouter)
 app.use('/products', productsRouter)
 app.use('/', homeRouter)
-// app.use('*', errorRouter)
+app.use('*', errorRouter)
 
 app.listen(PORT, () => {
   console.log(`LISTENING AT http://localhost:${PORT}`)
