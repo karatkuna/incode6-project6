@@ -19,4 +19,17 @@ router.get("/", (req, res) => {
   })
 })
 
+router.get("/new", (req, res) => {
+  db.any("SELECT * FROM categories")
+
+  .then((categories) => {
+    console.log(categories)
+    res.render("pages/new-product", {
+      pageTitle: 'New Product',
+      categories
+    })
+  })
+
+})
+
 module.exports = router

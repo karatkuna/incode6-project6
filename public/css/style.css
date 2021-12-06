@@ -1,7 +1,8 @@
 * { box-sizing: border-box; }
 
 ::-webkit-scrollbar {
-  width: 5px;
+  width: 10px;
+  height: 10px;
 }
 
 ::-webkit-scrollbar-thumb {
@@ -47,7 +48,7 @@ th {
   border-bottom: 2px solid lightgrey; 
 }
 
-tr:nth-child(even) {background-color: #f4f4f4;}
+tr:nth-child(even) { background-color: #f4f4f4; }
 
 select, input { 
   height: 33px; 
@@ -159,6 +160,7 @@ table img {
 }
 
 .table-wrapper {
+  width: 100%;
   height: 600px;
   overflow-x: auto !important; 
 }
@@ -167,4 +169,51 @@ table img {
 
 .text-center {
   text-align: center !important;
+}
+
+.form-wrapper {
+  width: 100%;
+  overflow-x: auto;
+  padding: 30px 40px;
+  background-color: #fff;
+  border-radius: 10px;
+}
+
+.form-wrapper div {
+  margin-top: 10px;
+  display: flex; 
+  align-items: center;
+}
+
+label { width: 130px;}
+
+#myForm table { 
+  width: auto !important; 
+  margin-left: 10px;
+  border-radius: 0;
+}
+
+#myForm tr { 
+  border-top: 0.5px solid lightgrey; 
+  border-bottom: 0.5px solid lightgrey;
+  background-color: #fff;
+}
+
+#myForm th { 
+  padding: 5px 20px !important;
+}
+
+#myForm input, #myForm select { margin-left: 10px; }
+.productOptions {
+  align-items: flex-start !important; 
+  padding-top: 5px !important;
+}
+
+#productImage {
+  margin-left: 0px !important;
+  border: none;
+}
+
+.btn-add-option {
+  padding: 5px 120px;
 }
