@@ -1,17 +1,15 @@
 require('dotenv').config()
 
 const express = require('express')
-// const methodOverride = require('method-override')
+const methodOverride = require('method-override')
 const session = require('express-session')
 const morgan = require('morgan')
 const ejs = require('ejs')
 const flash = require('express-flash')
 
 const homeRouter = require('./routes/home')
-const loginRouter = require('./routes/login')
-const logoutRouter = require('./routes/logout')
-const usersRouter = require('./routes/users')
-const schedulesRouter = require('./routes/schedules')
+const productsRouter = require('./routes/products')
+const loginRouter = require('./routes/products')
 const errorRouter = require('./routes/error')
 
 const PORT = process.env.PORT || 3000
@@ -33,7 +31,7 @@ app.use(express.static('public'))
 
 
 app.use(session({
-  name: 'mrcoffee_sid',
+  name: 'inventoryt_sid',
   secret: process.env.SESSION_SECRET,
   resave: false,
   saveUninitailized: false,
@@ -51,8 +49,8 @@ app.use(methodOverride('_method'))
 // app.use('/login', loginRouter)
 // app.use('/logout', logoutRouter)
 // app.use('/users', usersRouter)
-// app.use('/schedules', schedulesRouter)
-// app.use('/', homeRouter)
+app.use('/products', productsRouter)
+app.use('/', homeRouter)
 // app.use('*', errorRouter)
 
 app.listen(PORT, () => {

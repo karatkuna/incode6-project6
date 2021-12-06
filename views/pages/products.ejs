@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+
+<%- include('../partials/head') %>
+<body>
+  <%- include('../partials/header') %>
+  <%- include('../partials/nav') %>
+  <main>
+    <section class="operat-bar">
+      <a class="w3-right btn-add-new btn" href="/product/new">
+        <i class="fa fa-plus"></i> NEW
+      </a>
+      <span class="w3-right search-item btn">SEARCH: 
+        <select name="" id="">
+          <option value="">Product name</option>
+          <option value="">Category</option>
+        </select>
+        <input type="text">
+      </span>
+    </section>
+    <h1 class="title">PRODUCTS</h1>
+    <div class="table-wrapper">
+      <table class="w3-table">
+        <tr>
+          <th></th>
+          <th>Product</th>
+          <th>Name</th>
+          <th>Category</th>
+          <th>Delete</th>
+          <th>Edit</th>
+        </tr>
+        <% for(let i = 0; i < products.length; i++) { %>
+          <tr>
+            <td></td>
+            <td><img src="<%= products[i].picture %>" alt="<%= products[i].name %>"></td>
+            <td><%= products[i].name %></td>
+            <td><%= products[i].categoryname %></td>
+            <td class="text-center"><i class="fa fa-trash btn-icon btn"></i></td>
+            <td class="text-center"><i class="fa fa-edit btn-icon btn"></i></td>
+          </tr>
+        <% } %>
+      </table>
+    </div>
+  </main>
+  <%- include('../partials/footer') %>
+  
+</body>
+</html>

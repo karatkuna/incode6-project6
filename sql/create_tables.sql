@@ -1,3 +1,17 @@
+DROP TABLE IF EXISTS users;
+DROP TABLE IF EXISTS products;
+DROP TABLE IF EXISTS productoptions;
+DROP TABLE IF EXISTS categories;
+DROP TABLE IF EXISTS vendors;
+DROP TABLE IF EXISTS channels;
+DROP TABLE IF EXISTS sales;
+DROP TABLE IF EXISTS salesitems;
+DROP TABLE IF EXISTS po;
+DROP TABLE IF EXISTS poitems;
+DROP TABLE IF EXISTS pricelist;
+DROP TABLE IF EXISTS pricelistitems;
+DROP TABLE IF EXISTS stockmovement;
+
 CREATE TABLE IF NOT EXISTS users (
   id SERIAL PRIMARY KEY,
   firstname VARCHAR(255) NOT NULL,
@@ -81,7 +95,7 @@ CREATE TABLE IF NOT EXISTS pricelist (
 
 CREATE TABLE IF NOT EXISTS pricelistitems (
   id SERIAL PRIMARY KEY,
-  pricelist_id INT NOT NUL,
+  pricelist_id INT NOT NULL,
   productoptions_id INT NOT NULL,
   price NUMERIC(5,2)
 );
@@ -95,3 +109,4 @@ CREATE TABLE IF NOT EXISTS stockmovement (
   qty INT NOT NULL,
   created_at TIMESTAMPTZ DEFAULT NOW()
 );
+
